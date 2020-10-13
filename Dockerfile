@@ -25,6 +25,6 @@ ENV MAVEN_HOME /glue/apache-maven-3.6.0
 ENV JAVA_HOME /usr/lib/jvm/jdk
 ENV GLUE_HOME /glue/aws-glue-libs
 ENV PATH $PATH:$MAVEN_HOME/bin:$SPARK_HOME/bin:$JAVA_HOME/bin:$GLUE_HOME/bin
-COPY jars
+#COPY jars/* /glue/aws-glue-libs/jarsv1/
 RUN sh aws-glue-libs/bin/glue-setup.sh
 CMD ["bash"]
